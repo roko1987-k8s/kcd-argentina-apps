@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: post-apis
-  namespace: post-apis
+  namespace: C004
   labels:
     app: "post-apis"
     team: "C004"
