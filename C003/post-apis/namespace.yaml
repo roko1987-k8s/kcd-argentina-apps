@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: "c003"
+  labels:
+    team: "C003"
+    employee-id: "10003"
+    managed-by: "platform-engineering"
