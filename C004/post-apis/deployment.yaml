@@ -4,24 +4,24 @@ metadata:
   name: post-apis
   namespace: post-apis
   labels:
-    app: post-apis
-    team: C004
-    employee-id: 10004
-    framework: Quarkus
-    managed-by: platform-engineering
+    app: "post-apis"
+    team: "C004"
+    employee-id: "10004"
+    framework: "Quarkus"
+    managed-by: "platform-engineering"
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: post-apis
+      app: "post-apis"
   template:
     metadata:
       labels:
-        app: post-apis
-        team: C004
-        employee-id: 10004
-        framework: Quarkus
-        managed-by: platform-engineering
+        app: "post-apis"
+        team: "C004"
+        employee-id: "10004"
+        framework: "Quarkus"
+        managed-by: "platform-engineering"
     spec:
       containers:
         - name: post-apis

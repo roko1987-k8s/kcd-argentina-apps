@@ -4,15 +4,15 @@ metadata:
   name: post-apis-service
   namespace: post-apis
   labels:
-    app: post-apis
-    team: C004
-    employee-id: 10004
-    framework: Quarkus
-    managed-by: platform-engineering
+    app: "post-apis"
+    team: "C004"
+    employee-id: "10004"
+    framework: "Quarkus"
+    managed-by: "platform-engineering"
 spec:
   type: ClusterIP
   selector:
-    app: post-apis
+    app: "post-apis"
   ports:
     - protocol: TCP
       port: 80

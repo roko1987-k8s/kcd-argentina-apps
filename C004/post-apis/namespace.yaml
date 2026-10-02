@@ -3,6 +3,7 @@ kind: Namespace
 metadata:
   name: post-apis
   labels:
-    team: C004
-    employee-id: 10004
-    managed-by: platform-engineering
+    labels:
+      team: "C004"
+      employee-id: "10004"
+      managed-by: "platform-engineering"
