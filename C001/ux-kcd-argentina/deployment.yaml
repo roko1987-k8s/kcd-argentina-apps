@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ux-kcd-argentina
+  namespace: C001
+  labels:
+    app: "ux-kcd-argentina"
+    team: "C001"
+    employee-id: "10001"
+    framework: "Quarkus"
+    managed-by: "platform-engineering"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "ux-kcd-argentina"
+  template:
+    metadata:
+      labels:
+        app: "ux-kcd-argentina"
+        team: "C001"
+        employee-id: "10001"
+        framework: "Quarkus"
+        managed-by: "platform-engineering"
+    spec:
+      containers:
+        - name: ux-kcd-argentina
+          image: guopingjia/mario:cfe-demo
+          ports:
+            - containerPort: 80
+              protocol: TCP
