@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ux-kcd-argentina
-  namespace: C001
+  namespace: c001
+  name: "c001"
   labels:
     app: "ux-kcd-argentina"
     team: "C001"
