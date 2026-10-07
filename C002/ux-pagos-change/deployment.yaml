@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: c002
+  name: "c002"
+  labels:
+    app: "ux-pagos-change"
+    team: "C002"
+    employee-id: "10002"
+    framework: "Quarkus"
+    managed-by: "platform-engineering"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "ux-pagos-change"
+  template:
+    metadata:
+      labels:
+        app: "ux-pagos-change"
+        team: "C002"
+        employee-id: "10002"
+        framework: "Quarkus"
+        managed-by: "platform-engineering"
+    spec:
+      containers:
+        - name: ux-pagos-change
+          image: guopingjia/mario:cfe-demo
+          ports:
+            - containerPort: 80
+              protocol: TCP
