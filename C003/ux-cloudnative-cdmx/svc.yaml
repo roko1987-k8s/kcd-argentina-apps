@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "c003"
+  namespace: c003
+  labels:
+    app: "ux-cloudnative-cdmx"
+    team: "C003"
+    employee-id: "10003"
+    framework: "Quarkus"
+    managed-by: "platform-engineering"
+spec:
+  type: ClusterIP
+  selector:
+    app: "ux-cloudnative-cdmx"
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

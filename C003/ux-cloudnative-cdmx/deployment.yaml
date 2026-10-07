@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: c003
+  name: "c003"
+  labels:
+    app: "ux-cloudnative-cdmx"
+    team: "C003"
+    employee-id: "10003"
+    framework: "Quarkus"
+    managed-by: "platform-engineering"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "ux-cloudnative-cdmx"
+  template:
+    metadata:
+      labels:
+        app: "ux-cloudnative-cdmx"
+        team: "C003"
+        employee-id: "10003"
+        framework: "Quarkus"
+        managed-by: "platform-engineering"
+    spec:
+      containers:
+        - name: ux-cloudnative-cdmx
+          image: guopingjia/mario:cfe-demo
+          ports:
+            - containerPort: 80
+              protocol: TCP
